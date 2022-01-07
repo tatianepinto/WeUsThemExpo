@@ -32,7 +32,7 @@ class App extends Component {
               headerRight: () => (
                 <Button
                   onPress={() => {
-                    navigate('AddContact');
+                    navigate('Add Contact');
                     console.log("Pressed");
                   }}
 
@@ -42,7 +42,7 @@ class App extends Component {
               ),
             }}
           />
-          <Stack.Screen name="AddContact" component={AddContact} />
+          <Stack.Screen name="Add Contact" component={AddContact} />
         </Stack.Navigator>
       </NavigationContainer>
     );

@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Image, StyleSheet, TextInput, Text, View, TouchableOpacity, Button } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import * as ImagePicker from 'expo-image-picker';
+import LocalDB from './asyncStorage';
 
 export default function AddContact() {
   const [fName, onChangefName] = React.useState(null);
@@ -64,15 +65,14 @@ export default function AddContact() {
       />
       <Button
         style={styles.button}
-        onPress={onPressSave}
+        // onPress={LocalDB.saveData(JSON.stringify({
+        //   'fName': fName,
+        //   'lName': lName
+        // }))}
         title="Save"
         color="#f54242" />
     </View>
   );
-}
-
-const onPressSave = () => {
-  
 }
 
 const imageUploaderStyles = StyleSheet.create({
